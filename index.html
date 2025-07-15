@@ -1,4 +1,4 @@
-<!-- index.html : Power-Up Trello simple pour afficher les checklists sur la face de la carte -->
+<!-- index.html : Power-Up Trello simple pour afficher les checklists dans la carte -->
 <html>
 
 <head>
@@ -31,7 +31,6 @@
       const checklists = cardData.checklists || [];
       renderChecklists(checklists);
     });
-
 
     function renderChecklists(checklists) {
       const container = document.getElementById('content');
