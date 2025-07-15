@@ -12,8 +12,8 @@
         "card-back-section": {
             "title": "Checklists visibles",
             "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
-            "url": "./index.html",
-            "height": 300
+            "url": "https://laura-mourrat.github.io/plugin_trello/index.html",
+            "height": 250
         }
     },
     "permissions": {
