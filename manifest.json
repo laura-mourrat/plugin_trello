@@ -4,14 +4,14 @@
     "description": "Affiche toutes les tâches des checklists dans les cartes Trello.",
     "author": "Laura Mourrat",
     "icon": {
-        "url": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
+        "url": "https://laura-mourrat.github.io/plugin_trello/icon.png",
         "width": 64,
         "height": 64
     },
     "capabilities": {
         "card-back-section": {
             "title": "Checklists visibles",
-            "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
+            "icon": "https://laura-mourrat.github.io/plugin_trello/icon.png",
             "url": "https://laura-mourrat.github.io/plugin_trello/index.html",
             "height": 250
         }
