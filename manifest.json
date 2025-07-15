@@ -1,0 +1,25 @@
+{
+  "name": "Checklist Viewer",
+  "id": "checklist-viewer-plugin",
+  "author": "Laura Mourrat",
+  "description": "Affiche toutes les tâches des checklists dans les cartes Trello.",
+  "icon": {
+    "url": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
+    "width": 64,
+    "height": 64
+  },
+  "capabilities": {
+    "card-back-section": {
+      "title": "Checklists visibles",
+      "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828817.png",
+      "url": "./index.html",
+      "height": 200
+    }
+  },
+  "connectors": {},
+  "permissions": {
+    "external": {
+      "urls": ["https://api.trello.com"]
+    }
+  }
+}
