@@ -1,17 +1,15 @@
 {
-    "name": "Checklist",
-    "description": "Affiche les éléments de checklist directement sur les cartes.",
-    "permissions": [
-        "read"
-    ],
-    "capabilities": {
-        "card-badges": {
-            "url": "./client.js",
-            "height": 32
-        }
-    },
-    "author": "TonNom",
-    "icon": {
-        "url": "https://<TON_GITHUB_PAGES>/icon.png"
+  "name": "Checklist",
+  "description": "Affiche les éléments de checklist sur la carte",
+  "permissions": ["read"],
+  "capabilities": {
+    "card-badges": {
+      "url": "./client.js",
+      "height": 32
     }
+  },
+  "author": "Mourrat Laura",
+  "icon": {
+    "url": "https://laura-mourrat.github.io/plugin_trello/icon.png"
+  }
 }

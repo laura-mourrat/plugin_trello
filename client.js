@@ -1,8 +1,7 @@
-// client.js
 window.TrelloPowerUp.initialize({
-  'card-badges': function (t, options) {
+  'card-badges': function(t, options) {
     return t.card('checklists')
-      .then(function (card) {
+      .then(function(card) {
         const items = [];
         card.checklists.forEach(checklist => {
           checklist.checkItems.forEach(item => {
