@@ -1,5 +1,6 @@
 <!-- index.html : Power-Up Trello simple pour afficher les checklists sur la face de la carte -->
 <html>
+
 <head>
   <script src="https://p.trellocdn.com/power-up.min.js"></script>
   <style>
@@ -8,35 +9,29 @@
       font-size: 14px;
       padding: 10px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     .done {
       text-decoration: line-through;
       color: gray;
     }
   </style>
 </head>
+
 <body>
   <div id="content">Chargement des checklists...</div>
 
   <script>
     const t = TrelloPowerUp.iframe();
 
-    t.card('id').then(function(card) {
-      t.get('card', 'shared', 'checklistData', null).then(function(data) {
-        if (data) {
-          renderChecklists(data);
-        } else {
-          // Charger les vraies checklists
-          t.getRestApi().get(`/cards/${card.id}/checklists`).then(function(checklists) {
-            t.set('card', 'shared', 'checklistData', checklists).then(() => {
-              renderChecklists(checklists);
-            });
-          });
-        }
-      });
+    t.card('checklists').then(function (cardData) {
+      const checklists = cardData.checklists || [];
+      renderChecklists(checklists);
     });
+
 
     function renderChecklists(checklists) {
       const container = document.getElementById('content');
@@ -57,4 +52,5 @@
     }
   </script>
 </body>
+
 </html>
