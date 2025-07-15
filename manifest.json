@@ -16,7 +16,7 @@
             "height": 250
         },
         "card-badges": {
-            "url": "https://laura-mourrat.github.io/plugin_trello/badges.html"
+            "url": "https://laura-mourrat.github.io/plugin_trello/badges.js"
         }
     },
     "permissions": {
