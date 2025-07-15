@@ -14,11 +14,15 @@
             "icon": "https://laura-mourrat.github.io/plugin_trello/icon.png",
             "url": "https://laura-mourrat.github.io/plugin_trello/index.html",
             "height": 250
+        },
+        "card-badges": {
+            "url": "https://laura-mourrat.github.io/plugin_trello/badges.html"
         }
     },
     "permissions": {
         "capabilities": [
-            "card-back-section"
+            "card-back-section",
+            "card-badges"
         ],
         "card": [
             "checklists"

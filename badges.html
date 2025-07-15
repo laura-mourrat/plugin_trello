@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var t = TrelloPowerUp.initialize({
+            'card-badges': function (t, options) {
+                return t.card('checklists')
+                    .then(function (card) {
+                        const checklists = card.checklists || [];
+                        const badges = [];
+
+                        checklists.forEach(cl => {
+                            const done = cl.checkItems.filter(i => i.state === 'complete').length;
+                            const total = cl.checkItems.length;
+                            if (total > 0) {
+                                badges.push({
+                                    text: `${done}/${total}`,
+                                    icon: 'https://laura-mourrat.github.io/plugin_trello/icon.png',
+                                    color: done === total ? 'green' : 'orange'
+                                });
+                            }
+                        });
+
+                        return badges;
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>
