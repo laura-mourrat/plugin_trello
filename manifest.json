@@ -1,31 +1,17 @@
 {
-    "name": "Checklist Viewer",
-    "id": "checklist-viewer-plugin",
-    "description": "Affiche toutes les tâches des checklists dans les cartes Trello.",
-    "author": "Laura Mourrat",
-    "icon": {
-        "url": "https://laura-mourrat.github.io/plugin_trello/icon.png",
-        "width": 64,
-        "height": 64
-    },
+    "name": "Checklist",
+    "description": "Affiche les éléments de checklist directement sur les cartes.",
+    "permissions": [
+        "read"
+    ],
     "capabilities": {
-        "card-back-section": {
-            "title": "Checklists visibles",
-            "icon": "https://laura-mourrat.github.io/plugin_trello/icon.png",
-            "url": "https://laura-mourrat.github.io/plugin_trello/index.html",
-            "height": 250
-        },
         "card-badges": {
-            "url": "https://laura-mourrat.github.io/plugin_trello/badges.js"
+            "url": "./client.js",
+            "height": 32
         }
     },
-    "permissions": {
-        "capabilities": [
-            "card-back-section",
-            "card-badges"
-        ],
-        "card": [
-            "checklists"
-        ]
+    "author": "TonNom",
+    "icon": {
+        "url": "https://<TON_GITHUB_PAGES>/icon.png"
     }
 }

@@ -1,50 +1,14 @@
-<!-- index.html : Power-Up Trello simple pour afficher les checklists dans la carte -->
+<!DOCTYPE html>
 <html>
+
 <head>
+  <title>Checklist Power-Up</title>
   <script src="https://p.trellocdn.com/power-up.min.js"></script>
-  <style>
-    body {
-      font-family: sans-serif;
-      font-size: 14px;
-      padding: 10px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .done {
-      text-decoration: line-through;
-      color: gray;
-    }
-  </style>
 </head>
+
 <body>
-  <div id="content">Chargement des checklists...</div>
-
-  <script>
-    const t = TrelloPowerUp.iframe();
-
-    t.card('checklists').then(function(cardData) {
-      const checklists = cardData.checklists || [];
-      renderChecklists(checklists);
-    });
-
-    function renderChecklists(checklists) {
-      const container = document.getElementById('content');
-      container.innerHTML = '';
-      checklists.forEach(cl => {
-        const section = document.createElement('div');
-        section.innerHTML = `<strong>${cl.name}</strong>`;
-        const ul = document.createElement('ul');
-        cl.checkItems.forEach(item => {
-          const li = document.createElement('li');
-          li.textContent = item.name;
-          if (item.state === 'complete') li.className = 'done';
-          ul.appendChild(li);
-        });
-        section.appendChild(ul);
-        container.appendChild(section);
-      });
-    }
-  </script>
+  <h1>Checklist Power-Up</h1>
+  <p>Ce Power-Up affiche les éléments de checklist sur vos cartes Trello.</p>
 </body>
+
 </html>
