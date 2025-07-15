@@ -1,3 +1,4 @@
+<!-- badges.html : Affiche chaque tâche de checklist comme badge dans la carte -->
 <html>
 
 <head>
@@ -14,15 +15,13 @@
                         const badges = [];
 
                         checklists.forEach(cl => {
-                            const done = cl.checkItems.filter(i => i.state === 'complete').length;
-                            const total = cl.checkItems.length;
-                            if (total > 0) {
+                            cl.checkItems.forEach(item => {
                                 badges.push({
-                                    text: `${done}/${total}`,
-                                    icon: 'https://laura-mourrat.github.io/plugin_trello/icon.png',
-                                    color: done === total ? 'green' : 'orange'
+                                    text: item.name,
+                                    color: item.state === 'complete' ? 'green' : 'red',
+                                    icon: 'https://cdn-icons-png.flaticon.com/512/1828/1828817.png'
                                 });
-                            }
+                            });
                         });
 
                         return badges;
